@@ -5,9 +5,9 @@ let drum = stack(
   s("hh").beat("1,5,9,13",16), //closed hat
   s("cp").beat("3,13",16), //clap
   s("bd").beat("0,4,6,10,14",16), //kick
-).bank("RhythmAce"); //sample - archivos de audio
+).bank("RhythmAce"); 
 
-$drum: drum // guarda la información en la variable luego del stack
+$drum: drum 
 $triangle: note ("- - - 54").sound("oh").room(2)//triángulo / spark
 
 //melodías y harmonías
