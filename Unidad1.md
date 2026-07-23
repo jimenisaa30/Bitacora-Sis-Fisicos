@@ -8,11 +8,12 @@ let drum = stack(
 ).bank("RhythmAce"); //sample - archivos de audio
 
 $drum: drum // guarda la información en la variable luego del stack
+$triangle: note ("- - - 54").sound("oh").room(2)//triángulo / spark
 
 //melodías y harmonías
 $melody: note("[48 55]*4, 72 79 82 84").sound("gm_blown_bottle").legato(1) // melodía
 $melody: note("[61, 60 ] [65, 68] [77, 79] [64, 68]").sound("gm_electric_guitar_muted").legato(1)
-$wind: note("[39 41]*3").sound("wind").lpf(470) //viento
+$wind: note("[21 23]*3").sound("wind").lpf(500) //viento
 
 //bajo
 $bass: note("[54 56 58 61]/4").sound("sawtooth").lpf(700)
