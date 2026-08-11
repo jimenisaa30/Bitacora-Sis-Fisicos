@@ -1,8 +1,5 @@
 # Bitácora de Desarrollo - Unidad 2: Visuales Generativas y Parametrizables
-
-**Estudiante:** [Tu Nombre Completo]  
-**Curso:** Sistemas Físicos Interactivos 1  
-**Fecha:** Agosto 2026  
+ 
 
 ---
 
