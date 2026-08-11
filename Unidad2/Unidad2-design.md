@@ -61,7 +61,11 @@ Se integró la rampa de color animada para convertir la estructura geométrica e
 
 A continuación se muestra el comportamiento dinámico del sistema en ejecución:
 
-<video src="./Video%20final.mp4" controls width="100%"></video>
+
+
+<video src="https://github.com/user-attachments/assets/1304454e-eb8c-48d3-b901-908d0c26418e"></video>
+
+
 
 ---
 
