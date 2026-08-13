@@ -1,0 +1,12 @@
+const { visualid } = createParams('visualid')
+
+setcpm(30)
+//batería y percusión
+let drum = stack(
+  s("oh").beat("14",16).visualid("drum_oh"), //closed hat
+  s("hh").beat("1,5,9,13",16).visualid("drum_hh"), //closed hat
+  s("cp").beat("3,13",16).visualid("drum_cp"), //clap
+  s("bd").beat("0,4,6,10,14",16).visualid("drum_bd") //kick
+).bank("RhythmAce"); 
+
+$drum: stack(drum, drum.osc())
