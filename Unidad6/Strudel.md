@@ -1,5 +1,5 @@
-// FRUTIGER AERO — D mayor, 4/4, ♩ = 119
-// 1 ciclo = 1 compás  →  cps = BPM / 60 / 4
+const { visualid } = createParams('visualid')
+
 setcps(119/60/4)
 
 // ── Voicings de mano derecha ──
@@ -7,7 +7,7 @@ const D9    = '[f#4,a4,c5,e5]'
 const E9    = '[g#4,b4,d5,f#5]'
 const Em9   = '[g4,b4,d5,f#5]'
 const A9    = '[g4,b4,c#5,e5]'
-const E11D  = '[g#4,a4,b4,d5]'      // E11/D
+const E11D  = '[g#4,a4,b4,d5]'      
 const A13   = '[g4,c#5,e5,f#5]'
 const Dmaj9 = '[f#4,a4,c#5,e5]'
 const A11   = '[g4,c#5,d5,e5]'
@@ -61,16 +61,25 @@ const armonia = '<' + [
 // ── Dinámica: mf en los compases 1–13, mp en el 14 ──
 const vel = '<0.7!13 0.55>'
 
-// ══════════ AUDIO (sin MIDI) ══════════
 // mini(...) convierte las cadenas armadas con JS en patrones
 stack(
-  note(mini(armonia)).gain(mini(vel)),
+  // Bloque 1: mano derecha
+  note(mini(armonia)).gain(mini(vel))
+    .s('triangle').visualid("harmony")
+    .attack(0.005)
+    .decay(0.4)
+    .sustain(0.3)
+    .release(0.3)
+    .lpf(2200)
+    .room(0.3),
+
+  // Bloque 2: mano izquierda
   note(mini(bajo)).gain(mini(vel))
+    .s('triangle').visualid("bass")
+    .attack(0.005)
+    .decay(0.4)
+    .sustain(0.3)
+    .release(0.3)
+    .lpf(2200)
+    .room(0.3)
 )
-  .s('triangle')
-  .attack(0.005)
-  .decay(0.4)
-  .sustain(0.3)
-  .release(0.3)
-  .lpf(2200)
-  .room(0.3)
